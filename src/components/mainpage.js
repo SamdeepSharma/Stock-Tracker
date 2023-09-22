@@ -60,11 +60,11 @@ const Mainpage = () => {
                     fetchData && symbol && fetchData.d &&
                     <div className="fetchedData">
                          <p>Stock code: {symbol}</p>
-                         <p>Stock Price: {fetchData.c} <span className='${symbol}'> USD</span></p>
-                         <p>Price change: {fetchData.d}<span> USD</span></p>
-                         <p>Percent price change: {fetchData.dp}<span>%</span></p>
-                         <p>Opened at: {fetchData.o}<span> USD</span> </p>
-                         <p>Previous close: {fetchData.pc}<span> USD</span></p>
+                         <p>Stock Price: {fetchData.c} USD</p>
+                         <p>Price change: {fetchData.d} USD</p>
+                         <p>Percent price change: {fetchData.dp}%</p>
+                         <p>Opened at: {fetchData.o} USD</p>
+                         <p>Previous close: {fetchData.pc} USD</p>
                          <p>Today's Range: {fetchData.l} - {fetchData.h}</p>
                          <p>Timestamp: {fetchData.t}</p>
 
