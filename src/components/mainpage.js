@@ -34,10 +34,8 @@ const Mainpage = () => {
                          const data = await nresponse.json();
                          setFetchData(data);
                          setSymbol(stockcode);
-                         
                     }
                }
-               
           }
           catch (error) {
                setLoadingmsg('Page is temporarily down :(');
@@ -57,7 +55,7 @@ const Mainpage = () => {
 
                <h6>{loadingmsg}</h6>
                {
-                    fetchData && symbol && fetchData.d &&
+                    fetchData && symbol && fetchData.t &&
                     <div className="fetchedData">
                          <p>Stock code: {symbol}</p>
                          <p>Stock Price: {fetchData.c} USD</p>
@@ -67,7 +65,8 @@ const Mainpage = () => {
                          <p>Previous close: {fetchData.pc} USD</p>
                          <p>Today's Range: {fetchData.l} - {fetchData.h}</p>
                          <p>Timestamp: {fetchData.t}</p>
-
+                         <br />
+                         <hr />
                     </div>
                }
                {
@@ -76,12 +75,13 @@ const Mainpage = () => {
                          <p>Please enter a STOCK CODE!!</p>
                     </div>
                }
-               {/* {
-                    (fetchData.c == "0") && symbol && fetchData &&
+               {
+                    fetchData && symbol && (!fetchData.d) &&
                     <div className="fetchedData">
-                         <p>Please enter a VALID STOCK CODE!!</p>
+                         <p> `{symbol}` STOCK CODE DOES NOT EXIST!!</p>
+                         <p> Please enter a VALID STOCK CODE!!</p>
                     </div>
-               } */}
+               }
           </div>
      );
 }
