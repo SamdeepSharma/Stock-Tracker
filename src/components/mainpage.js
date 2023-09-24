@@ -55,7 +55,7 @@ const Mainpage = () => {
 
                <h6>{loadingmsg}</h6>
                {
-                    fetchData && symbol && fetchData.t &&
+                    fetchData && symbol && fetchData.d &&
                     <div className="fetchedData">
                          <p>Stock code: {symbol}</p>
                          <p>Stock Price: {fetchData.c} USD</p>
@@ -70,15 +70,15 @@ const Mainpage = () => {
                     </div>
                }
                {
-                    (!symbol) && fetchData &&
+                    fetchData && (!symbol) && 
                     <div className="fetchedData">
                          <p>Please enter a STOCK CODE!!</p>
                     </div>
                }
                {
-                    fetchData && symbol && (!fetchData.d) &&
+                    fetchData && symbol && (!fetchData.t) &&
                     <div className="fetchedData">
-                         <p> `{symbol}` STOCK CODE DOES NOT EXIST!!</p>
+                         <p> '{symbol}' STOCK CODE DOES NOT EXIST!!</p>
                          <p> Please enter a VALID STOCK CODE!!</p>
                     </div>
                }

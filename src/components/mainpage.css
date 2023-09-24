@@ -110,5 +110,69 @@ h6{
 .fetchedData p{
      margin: 2px;
      padding: 3px;
-     text-shadow: 3px 3px 10px #00ecff;
+     text-shadow: 3px 3px 10px #00c3ff;
 }
+
+@media (max-width: 580px) {
+     h1 {
+          color: rgb(208 87 43 / 93%);
+          font-family: 'Bree Serif', serif;
+          font-size: 2.3rem;
+          font-weight: bolder;
+          padding-top: 25px;
+          padding-left: 20px;
+          text-shadow: 3px 1px 1px pink;
+      }
+
+      .search {
+          margin-top: 45px;
+          font-size: 0.8rem;
+          margin-left: 20px;
+      }
+      #searchbox {
+          color: pink;
+          margin-top: 18px;
+          padding: 7px 14px;
+          width: 230px;
+          border: 3px solid rgb(255, 171, 138);
+          border-radius: 8px;
+          background: transparent;
+          transition: all ease-in-out 0.1s 0s;
+      }
+      .btn {
+          background-color: var(--bg);
+          margin-top: 18px;
+          margin-left: 20px;
+          padding: 7px 10px;
+          width: 125px;
+          transition: all ease-in-out 0.2s 0s;
+          border-top: 3px solid rgb(255, 255, 255);
+          border-left: 3px solid rgb(255, 255, 255);
+          border-right: 3px solid var(--bg);
+          border-bottom: 3px solid var(--bg);
+          border-radius: 8px;
+          cursor: pointer;
+     }
+     .btn:hover {
+          border-radius: 7px;
+          margin-left: 25px;
+          margin-top: 25px;
+          border-bottom: 3px solid #00ffe3;
+          border-right: 3px solid #00ffe3;
+          border-left: 3px solid var(--bg);
+          border-top: 3px solid var(--bg);
+      }
+      .fetchedData {
+          color: #00ffe3;
+          margin-left: 20px;
+          margin-right: 20px;
+          margin-top: 20px;
+          font-size: 1.2rem;
+      }
+      h6 {
+          color: pink;
+          margin-left: 25px;
+          margin-top: 20px;
+          font-size: 1.1rem;
+      }
+     }
