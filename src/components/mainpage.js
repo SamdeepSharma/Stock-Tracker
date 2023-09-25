@@ -55,16 +55,31 @@ const Mainpage = () => {
 
                <h6>{loadingmsg}</h6>
                {
-                    fetchData && symbol && fetchData.d &&
+                    fetchData && symbol && fetchData.d!=null && fetchData.d<0 &&
                     <div className="fetchedData">
-                         <p>Stock code: {symbol}</p>
-                         <p>Stock Price: {fetchData.c} USD</p>
-                         <p>Price change: {fetchData.d} USD</p>
-                         <p>Percent price change: {fetchData.dp}%</p>
-                         <p>Opened at: {fetchData.o} USD</p>
-                         <p>Previous close: {fetchData.pc} USD</p>
-                         <p>Today's Range: {fetchData.l} - {fetchData.h}</p>
-                         <p>Timestamp: {fetchData.t}</p>
+                         <p>Stock code: <span>{symbol}</span></p>
+                         <p>Stock Price: <span>{fetchData.c} USD</span></p>
+                         <p>Price change: <span>{fetchData.d} USD</span></p>
+                         <p>Percent price change: <span>{fetchData.dp}%</span></p>
+                         <p>Opened at: <span>{fetchData.o} USD</span></p>
+                         <p>Previous close: <span>{fetchData.pc} USD</span></p>
+                         <p>Today's Range: <span>{fetchData.l} - {fetchData.h}</span></p>
+                         <p>Timestamp: <span>{fetchData.t}</span></p>
+                         <br />
+                         <hr />
+                    </div>
+               }
+               {
+                    fetchData && symbol && fetchData.d!=null && fetchData.d>=0 &&
+                    <div className="fetchedData fetchedDataP">
+                         <p>Stock code: <span>{symbol}</span></p>
+                         <p>Stock Price: <span>{fetchData.c} USD</span></p>
+                         <p>Price change: <span>{fetchData.d} USD</span></p>
+                         <p>Percent price change: <span>{fetchData.dp}%</span></p>
+                         <p>Opened at: <span>{fetchData.o} USD</span></p>
+                         <p>Previous close: <span>{fetchData.pc} USD</span></p>
+                         <p>Today's Range: <span>{fetchData.l} - {fetchData.h}</span></p>
+                         <p>Timestamp: <span>{fetchData.t}</span></p>
                          <br />
                          <hr />
                     </div>

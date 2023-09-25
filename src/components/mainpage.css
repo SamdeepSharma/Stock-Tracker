@@ -1,6 +1,7 @@
 *{
      margin: 0px;
      padding: 0px;
+     font-display: swap;
      font-family: 'Bubblegum Sans',cursive;
      color: aliceblue;
 }
@@ -111,6 +112,14 @@ h6{
      margin: 2px;
      padding: 3px;
      text-shadow: 3px 3px 10px #00c3ff;
+}
+
+.fetchedData span{
+     text-shadow: 4px 4px 8px #ff0000;
+}
+
+.fetchedDataP span{
+     text-shadow: 4px 4px 8px #1aff00;
 }
 
 @media (max-width: 580px) {
