@@ -1,10 +1,11 @@
 import './mainpage.css';
 import { useState } from 'react';
+
 <style>
-     @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bubblegum+Sans&family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bubblegum+Sans&family=Carter+One&display=fallback');
 </style>
 
-const Mainpage = () => {
+   const Mainpage = () => {
      const [stockcode, setStockcode] = useState('');
      const [fetchData, setFetchData] = useState(null);
      const [loadingmsg, setLoadingmsg] = useState('');
@@ -57,29 +58,29 @@ const Mainpage = () => {
                {
                     fetchData && symbol && fetchData.d!=null && fetchData.d<0 &&
                     <div className="fetchedData">
-                         <p>Stock code: <span>{symbol}</span></p>
+                         <p>Stock code: <span1>{symbol}</span1></p>
                          <p>Stock Price: <span>{fetchData.c} USD</span></p>
                          <p>Price change: <span>{fetchData.d} USD</span></p>
                          <p>Percent price change: <span>{fetchData.dp}%</span></p>
-                         <p>Opened at: <span>{fetchData.o} USD</span></p>
-                         <p>Previous close: <span>{fetchData.pc} USD</span></p>
+                         <p>Opened at: <span1>{fetchData.o} USD</span1></p>
+                         <p>Previous close: <span1>{fetchData.pc} USD</span1></p>
                          <p>Today's Range: <span>{fetchData.l} - {fetchData.h}</span></p>
-                         <p>Timestamp: <span>{fetchData.t}</span></p>
+                         <p>Timestamp: <span1>{fetchData.t}</span1></p>
                          <br />
                          <hr />
                     </div>
                }
-               {
+                              {
                     fetchData && symbol && fetchData.d!=null && fetchData.d>=0 &&
                     <div className="fetchedData fetchedDataP">
-                         <p>Stock code: <span>{symbol}</span></p>
+                         <p>Stock code: <span1>{symbol}</span1></p>
                          <p>Stock Price: <span>{fetchData.c} USD</span></p>
                          <p>Price change: <span>{fetchData.d} USD</span></p>
                          <p>Percent price change: <span>{fetchData.dp}%</span></p>
-                         <p>Opened at: <span>{fetchData.o} USD</span></p>
-                         <p>Previous close: <span>{fetchData.pc} USD</span></p>
+                         <p>Opened at: <span1>{fetchData.o} USD</span1></p>
+                         <p>Previous close: <span1>{fetchData.pc} USD</span1></p>
                          <p>Today's Range: <span>{fetchData.l} - {fetchData.h}</span></p>
-                         <p>Timestamp: <span>{fetchData.t}</span></p>
+                         <p>Timestamp: <span1>{fetchData.t}</span1></p>
                          <br />
                          <hr />
                     </div>

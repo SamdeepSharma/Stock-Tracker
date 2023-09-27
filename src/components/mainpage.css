@@ -1,8 +1,7 @@
 *{
      margin: 0px;
      padding: 0px;
-     font-display: swap;
-     font-family: 'Bubblegum Sans',cursive;
+     font-family: 'Bubblegum Sans', cursive ,Georgia, Arial;
      color: aliceblue;
 }
 
@@ -25,7 +24,7 @@
 
 h1{
      color: rgb(208 87 43 / 93%);
-     font-family: 'Bree Serif', serif;
+     font-family: 'Bree Serif', serif, Impact;
      font-size: 3.5rem;
      font-weight: bolder;
      padding-top: 25px;
@@ -109,23 +108,36 @@ h6{
 }
 
 .fetchedData p{
+     color: #8ee5ff;
      margin: 2px;
      padding: 3px;
      text-shadow: 3px 3px 10px #00c3ff;
 }
 
 .fetchedData span{
-     text-shadow: 4px 4px 8px #ff0000;
+     color: #fd4545;
+     text-shadow: 4px 4px 10px #ff0000;
 }
+     
+.fetchedData span1{
+     color: #ffffff;
+     text-shadow: 4px 4px 7px #ff0000;
+}
+
 
 .fetchedDataP span{
-     text-shadow: 4px 4px 8px #1aff00;
+     color: #6bff60;
+     text-shadow: 4px 4px 10px #1aff00;
 }
 
+.fetchedDataP span1{
+     color: #ffffff;
+     text-shadow: 4px 4px 7px #1aff00;
+}
 @media (max-width: 580px) {
      h1 {
           color: rgb(208 87 43 / 93%);
-          font-family: 'Bree Serif', serif;
+          font-family: 'Bree Serif', serif, Impact;
           font-size: 2.3rem;
           font-weight: bolder;
           padding-top: 25px;
@@ -143,7 +155,7 @@ h6{
           margin-top: 18px;
           padding: 7px 14px;
           width: 230px;
-          border: 3px solid rgb(255, 171, 138);
+          border: 2px solid rgb(255, 171, 138);
           border-radius: 8px;
           background: transparent;
           transition: all ease-in-out 0.1s 0s;
@@ -155,10 +167,10 @@ h6{
           padding: 7px 10px;
           width: 125px;
           transition: all ease-in-out 0.2s 0s;
-          border-top: 3px solid rgb(255, 255, 255);
-          border-left: 3px solid rgb(255, 255, 255);
-          border-right: 3px solid var(--bg);
-          border-bottom: 3px solid var(--bg);
+          border-top: 2px solid rgb(255, 255, 255);
+          border-left: 2px solid rgb(255, 255, 255);
+          border-right: 2px solid var(--bg);
+          border-bottom: 2px solid var(--bg);
           border-radius: 8px;
           cursor: pointer;
      }
@@ -166,10 +178,10 @@ h6{
           border-radius: 7px;
           margin-left: 25px;
           margin-top: 25px;
-          border-bottom: 3px solid #00ffe3;
-          border-right: 3px solid #00ffe3;
-          border-left: 3px solid var(--bg);
-          border-top: 3px solid var(--bg);
+          border-bottom: 2px solid #00ffe3;
+          border-right: 2px solid #00ffe3;
+          border-left: 2px solid var(--bg);
+          border-top: 2px solid var(--bg);
       }
       .fetchedData {
           color: #00ffe3;
@@ -184,4 +196,16 @@ h6{
           margin-top: 20px;
           font-size: 1.1rem;
       }
+      .main::before{
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-image: url(../../public/stock_bgp.png);
+          background-position:center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          z-index: -1;
+          opacity: 0.95;
+     }
      }
